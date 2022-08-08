@@ -1,0 +1,56 @@
+
+public abstract class  Conta implements IConta{
+// muitas vezes posso tornar uma classe abstrata, pois esta não pode ser instanciada, pois não faz sentido dar um new em conta sendo que o banco trabalha apenas com conta poupança e corrnte	
+//assim só os filhos podem ser instanciados
+//Polimorfismo é a capacidade de um objeto poder ser referenciado de várias formas ex:
+//Conta conta = new ContaCorrente ou,
+//Conta conta = new ContaPoupanca
+	
+	private static final int AGENCIA_PADRAO = 1;
+	private static int SEQUENCIAL = 1;
+	
+	protected int agencia;
+	protected int numero;
+	protected double saldo;
+	
+	public Conta () {
+		this.agencia = Conta.AGENCIA_PADRAO; 
+		this.numero = SEQUENCIAL++;
+		//a proxima conta será 2
+	
+	}
+     
+	
+
+    
+    public int getAgencia() {
+		return agencia;
+	}
+
+	public int getNumero() {
+		return numero;
+	}
+
+	public double getSaldo() {
+		return saldo;
+	}
+
+	@Override
+	public void sacar(double valor) {
+		
+		
+	}
+
+	@Override
+	public void depositar(double valor) {
+		
+		
+	}
+
+	@Override
+	public void transferir(double valor, Conta contaDestino) {
+	
+		
+	}
+
+}

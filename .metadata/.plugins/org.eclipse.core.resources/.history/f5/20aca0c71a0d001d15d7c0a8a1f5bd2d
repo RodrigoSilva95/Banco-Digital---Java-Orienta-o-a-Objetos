@@ -1,0 +1,7 @@
+
+public class ContaPoupança {
+  
+	public int agencia;
+	public int numero;
+	
+}
